@@ -1,153 +1,404 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 <meta charset="UTF-8">
-<title>Giochi Inclusivi - TFA Sostegno</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LEVEL UP - Non è solo un gioco</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #eef2f3;
+
+/* ---------- GENERALE ---------- */
+
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    scroll-behavior:smooth;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 25px;
-    text-align: center;
+/* ---------- HERO IMAGE ---------- */
+
+.hero{
+    height:100vh;
+    background-image:url('sfondo.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
 }
 
-section {
-    padding: 20px;
+.overlay{
+    background:rgba(255,255,255,0.82);
+    padding:50px;
+    border-radius:25px;
+    max-width:800px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
-.gioco {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.overlay h1{
+    font-size:75px;
+    margin:0;
+    color:#d35400;
+    letter-spacing:3px;
 }
 
-h2 {
-    color: #2c3e50;
+.overlay h2{
+    font-size:38px;
+    color:#444;
+    margin-top:15px;
 }
 
-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+.overlay p{
+    font-size:24px;
+    color:#555;
+    margin-top:25px;
+    line-height:1.5;
 }
 
-button:hover {
-    background-color: #2980b9;
+/* ---------- CONTENITORE ---------- */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:60px 0;
 }
 
-.regole {
-    display: none;
-    margin-top: 10px;
+/* ---------- CARD ---------- */
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    margin-bottom:35px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
 
-.inclusione {
-    background-color: #dff0d8;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
+.card:hover{
+    transform:translateY(-5px);
 }
 
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #2c3e50;
-    color: white;
+.card h2{
+    color:#4A90E2;
+    margin-top:0;
+    font-size:32px;
 }
+
+.card p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* ---------- ICONE ---------- */
+
+.icon{
+    font-size:45px;
+    color:#6C63FF;
+    margin-bottom:20px;
+}
+
+/* ---------- BOTTONI ---------- */
+
+button{
+    background:#6C63FF;
+    color:white;
+    border:none;
+    padding:14px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#4A90E2;
+}
+
+/* ---------- REGOLE ---------- */
+
+.regole{
+    display:none;
+    margin-top:20px;
+    background:#eef3ff;
+    padding:20px;
+    border-radius:12px;
+    line-height:1.6;
+}
+
+/* ---------- INCLUSIONE ---------- */
+
+.inclusione{
+    margin-top:25px;
+    background:#E8F8EE;
+    border-left:6px solid #27AE60;
+    padding:18px;
+    border-radius:12px;
+    font-size:17px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:17px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:768px){
+
+.overlay h1{
+    font-size:50px;
+}
+
+.overlay h2{
+    font-size:28px;
+}
+
+.overlay p{
+    font-size:18px;
+}
+
+.card{
+    padding:25px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Progettazione di Giochi Inclusivi</h1>
-<p>Attività didattica - TFA Sostegno</p>
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="overlay">
+
+<h1>LEVEL UP</h1>
+
+<h2>NON È SOLO UN GIOCO</h2>
+
+<p>
+Percorso educativo sul gioco,
+l’inclusione e la progettazione
+</p>
+
+</div>
+
 </header>
 
-<section>
+<!-- CONTENUTI -->
 
-<div class="gioco">
+<div class="container">
+
+<!-- GIOCO 1 -->
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-eye-slash"></i>
+</div>
+
 <h2>FIDATI DI ME!!!</h2>
 
-<p><strong>Obiettivo:</strong> Fiducia, comunicazione e collaborazione</p>
-<p><strong>Tempo:</strong> 10-15 minuti</p>
+<p>
+<strong>Obiettivo:</strong>
+Sviluppare fiducia, comunicazione
+e collaborazione.
+</p>
 
-<button onclick="toggle('regole1')">Mostra/Nascondi Regole</button>
+<p>
+<strong>Tempo:</strong>
+10-15 minuti
+</p>
+
+<button onclick="toggle('regole1')">
+Mostra/Nascondi Regole
+</button>
 
 <div id="regole1" class="regole">
-<p>Attività a coppie: uno guida e uno è bendato. Il guidato segue le indicazioni e si affida al compagno. Il percorso viene ripetuto tre volte con velocità diverse, poi si scambiano i ruoli.</p>
+
+Attività a coppie:
+uno guida e uno è bendato.
+
+Il guidato segue le indicazioni
+e si affida al compagno.
+
+Il percorso viene svolto
+tre volte con velocità diverse,
+poi si scambiano i ruoli.
+
 </div>
 
 <div class="inclusione">
-<strong>Inclusione:</strong> Favorisce la fiducia reciproca e valorizza la comunicazione non verbale, permettendo la partecipazione anche a studenti con difficoltà comunicative.
-</div>
+
+<strong>Inclusione:</strong>
+
+Il gioco valorizza la comunicazione
+non verbale e favorisce la fiducia
+reciproca, permettendo la partecipazione
+attiva di tutti gli studenti.
+
 </div>
 
+</div>
 
-<div class="gioco">
+<!-- GIOCO 2 -->
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-people-arrows"></i>
+</div>
+
 <h2>PASSAGGI: INSIEME SI ARRIVA</h2>
 
-<p><strong>Obiettivo:</strong> Collaborazione e partecipazione attiva</p>
-<p><strong>Tempo:</strong> 5 minuti</p>
+<p>
+<strong>Obiettivo:</strong>
+Collaborazione, inclusione
+e partecipazione attiva.
+</p>
 
-<button onclick="toggle('regole2')">Mostra/Nascondi Regole</button>
+<p>
+<strong>Tempo:</strong>
+5 minuti
+</p>
+
+<button onclick="toggle('regole2')">
+Mostra/Nascondi Regole
+</button>
 
 <div id="regole2" class="regole">
-<p>Due squadre sedute passano la palla senza muoversi. Tutti devono toccare la palla per segnare un punto. È possibile anche rotolare la palla.</p>
+
+Due squadre sedute passano la palla
+senza muoversi.
+
+Tutti devono toccare la palla
+per fare punto.
+
+È possibile anche rotolare
+la palla per facilitare
+la partecipazione.
+
 </div>
 
 <div class="inclusione">
-<strong>Inclusione:</strong> Il gioco elimina la competizione basata sulla velocità e permette la partecipazione anche a studenti con disabilità motorie o difficoltà comunicative.
-</div>
+
+<strong>Inclusione:</strong>
+
+L’attività elimina la competizione
+basata sulla velocità e favorisce
+la partecipazione anche di studenti
+con difficoltà motorie o comunicative.
+
 </div>
 
+</div>
 
-<div class="gioco">
+<!-- GIOCO 3 -->
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-chess-rook"></i>
+</div>
+
 <h2>CASTELLI</h2>
 
-<p><strong>Obiettivo:</strong> Organizzazione, comunicazione e ruoli</p>
-<p><strong>Tempo:</strong> 15 minuti</p>
+<p>
+<strong>Obiettivo:</strong>
+Organizzazione, comunicazione
+e collaborazione.
+</p>
 
-<button onclick="toggle('regole3')">Mostra/Nascondi Regole</button>
+<p>
+<strong>Tempo:</strong>
+15 minuti
+</p>
+
+<button onclick="toggle('regole3')">
+Mostra/Nascondi Regole
+</button>
 
 <div id="regole3" class="regole">
-<p>Due squadre costruiscono un castello con materiali disponibili. Successivamente cercano di abbattere quello avversario. Ogni partecipante ha un ruolo specifico.</p>
+
+Due squadre costruiscono un castello
+con i materiali disponibili.
+
+Successivamente cercano di abbattere
+la costruzione avversaria.
+
+Ogni partecipante ha un ruolo specifico.
+
 </div>
 
 <div class="inclusione">
-<strong>Inclusione:</strong> La suddivisione in ruoli consente a tutti di partecipare attivamente secondo le proprie capacità, valorizzando ciascun studente.
-</div>
+
+<strong>Inclusione:</strong>
+
+La suddivisione in ruoli permette
+a ciascun partecipante di contribuire
+secondo le proprie capacità,
+valorizzando ogni studente.
+
 </div>
 
-</section>
+</div>
+
+</div>
+
+<!-- FOOTER -->
 
 <footer>
-<p>Progetto TIC - TFA Sostegno | Didattica inclusiva e digitale</p>
+
+Progetto TIC - TFA Sostegno |
+Didattica inclusiva e digitale
+
 </footer>
 
+<!-- SCRIPT -->
+
 <script>
-function toggle(id) {
-    var x = document.getElementById(id);
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
+
+function toggle(id){
+
+let x = document.getElementById(id);
+
+if(x.style.display === "block"){
+
+x.style.display = "none";
+
+}else{
+
+x.style.display = "block";
+
 }
+
+}
+
 </script>
 
 </body>
 </html>
+
+
+   
+    
+    
+
